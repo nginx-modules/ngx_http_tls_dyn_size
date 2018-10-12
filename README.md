@@ -1,6 +1,7 @@
 # Optimizing TLS over TCP to reduce latency for NGINX
 
 * [`nginx__dynamic_tls_records`](https://github.com/cloudflare/sslconfig/blob/3e45b99/patches/)
+* [`Optimizing HTTP/2 prioritization with BBR and tcp_notsent_lowat`](https://blog.cloudflare.com/http-2-prioritization-with-nginx/)
 
 ### What we do now
 
