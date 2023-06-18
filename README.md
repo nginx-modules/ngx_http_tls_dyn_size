@@ -47,13 +47,13 @@ In case the connection idles for a given amount of time
 
 ### Configuration directives
 
-#### dyn_rec_enable
-* **syntax**: `dyn_rec_enable bool`
+#### ssl_dyn_rec_enable
+* **syntax**: `ssl_dyn_rec_enable bool`
 * **default**: `off`
 * **context**: `http`
 
-#### dyn_rec_timeout
-* **syntax**: `dyn_rec_timeout number`
+#### ssl_dyn_rec_timeout
+* **syntax**: `ssl_dyn_rec_timeout number`
 * **default**: `1000`
 * **context**: `http`
 
@@ -68,8 +68,8 @@ After a connection has idled for a given timeout, begin
 the process from the start. The actual parameters are
 configurable. If dyn_rec_timeout is 0, we assume dyn_rec is off.
 
-#### dyn_rec_size_lo
-* **syntax**: `dyn_rec_size_lo number`
+#### ssl_dyn_rec_size_lo
+* **syntax**: `ssl_dyn_rec_size_lo number`
 * **default**: `1369`
 * **context**: `http`
 
@@ -77,15 +77,15 @@ Default sizes for the dynamic record sizes are defined to fit maximal
 TLS + IPv6 overhead in a single TCP segment for lo and 3 segments for hi:
 1369 = 1500 - 40 (IP) - 20 (TCP) - 10 (Time) - 61 (Max TLS overhead)
 
-#### dyn_rec_size_hi
-* **syntax**: `dyn_rec_size_hi number`
+#### ssl_dyn_rec_size_hi
+* **syntax**: `ssl_dyn_rec_size_hi number`
 * **default**: `4229`
 * **context**: `http`
 
 4229 = (1500 - 40 - 20 - 10) * 3  - 61
 
-#### dyn_rec_threshold
-* **syntax**: `dyn_rec_threshold number`
+#### ssl_dyn_rec_threshold
+* **syntax**: `ssl_dyn_rec_threshold number`
 * **default**: `40`
 * **context**: `http`
 
