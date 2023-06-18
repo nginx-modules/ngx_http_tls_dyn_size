@@ -66,7 +66,7 @@ to reduce header overhead.
 
 After a connection has idled for a given timeout, begin
 the process from the start. The actual parameters are
-configurable. If dyn_rec_timeout is 0, we assume dyn_rec is off.
+configurable. If `ssl_dyn_rec_timeout` is `0`, we assume `ssl_dyn_rec` is `off`.
 
 #### ssl_dyn_rec_size_lo
 * **syntax**: `ssl_dyn_rec_size_lo number`
