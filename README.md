@@ -50,12 +50,12 @@ In case the connection idles for a given amount of time
 #### ssl_dyn_rec_enable
 * **syntax**: `ssl_dyn_rec_enable bool`
 * **default**: `off`
-* **context**: `http`
+* **context**: `http`, `server`
 
 #### ssl_dyn_rec_timeout
 * **syntax**: `ssl_dyn_rec_timeout number`
 * **default**: `1000`
-* **context**: `http`
+* **context**: `http`, `server`
 
 We want the initial records to fit into one TCP segment
 so we don't get TCP HoL blocking due to TCP Slow Start.
@@ -71,7 +71,7 @@ configurable. If `ssl_dyn_rec_timeout` is `0`, we assume `ssl_dyn_rec` is `off`.
 #### ssl_dyn_rec_size_lo
 * **syntax**: `ssl_dyn_rec_size_lo number`
 * **default**: `1369`
-* **context**: `http`
+* **context**: `http`, `server`
 
 Default sizes for the dynamic record sizes are defined to fit maximal
 TLS + IPv6 overhead in a single TCP segment for lo and 3 segments for hi:
@@ -80,14 +80,14 @@ TLS + IPv6 overhead in a single TCP segment for lo and 3 segments for hi:
 #### ssl_dyn_rec_size_hi
 * **syntax**: `ssl_dyn_rec_size_hi number`
 * **default**: `4229`
-* **context**: `http`
+* **context**: `http`, `server`
 
 4229 = (1500 - 40 - 20 - 10) * 3  - 61
 
 #### ssl_dyn_rec_threshold
 * **syntax**: `ssl_dyn_rec_threshold number`
 * **default**: `40`
-* **context**: `http`
+* **context**: `http`, `server`
 
 ### License
 
